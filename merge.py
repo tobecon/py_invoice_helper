@@ -51,7 +51,7 @@ def readDir(dir):
         if file.__contains__(".pdf"):
             resultList.append(extract_qrcodes_from_pdf(filename))
     print(sum([x[0] for x in resultList]))
-    mergeDir(dir)
+    #mergeDir(dir)
 
 def mergeDir(dir):
     mergedfile = dir+f"\\merged.pdf"
@@ -66,7 +66,7 @@ def mergeDir(dir):
             continue
         if mergedPdf is None:
            shutil.copy2(filename,mergedfile)
-           mergedPdf = fitz.open(mergedPdf)
+           mergedPdf = fitz.open(filename)
         else:
             p = fitz.open(filename)
             mergedPdf.insert_pdf(p)

@@ -9,3 +9,6 @@
 ```
 .\dist\merge.exe path\to\your\invoice\folder
 ```
+
+### 2024-01-16 
+- fix bug: 第一个文件没有merge进去
